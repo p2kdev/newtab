@@ -1,6 +1,6 @@
 Package: com.chr1s.newtab
 Name: NewTab
-Version: 1.0.0
+Version: 1.1
 Architecture: iphoneos-arm
 Description: Add newtab shortcut to safari toolbar
 Maintainer: Chr1s

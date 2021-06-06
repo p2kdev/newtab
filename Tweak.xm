@@ -18,10 +18,7 @@ NSMutableArray<UIBarButtonItem *> *itemsArray;
     });
 	return %orig;
 }
--(void)_newTabFromTabViewButton {
-	// NSLog(@"_newTabFromTabViewButton");
-	%orig;
-}
+
 -(void)dealloc {
 	%orig;
 	// Is this how you do it????
@@ -36,7 +33,7 @@ NSMutableArray<UIBarButtonItem *> *itemsArray;
 	itemsArray = [toolbarItems mutableCopy];
 
 	UIBarButtonItem *addTabButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(newTab)];
-	[itemsArray insertObject:addTabButton atIndex:3];
+	[itemsArray insertObject:addTabButton atIndex:[itemsArray count] - 2];
 
 	%orig(itemsArray);
 }
